@@ -1,0 +1,37 @@
+<html>
+<head>
+    <title></title>
+</head>
+
+<body>
+
+    <form action="{% url 'survey'%}" method="POST">
+        {% csrf_token %}
+        How is the book ASP.NET with C# by Vipul Prakashan?
+        <br />
+        <ul style="list-style-type:none">
+            <li>
+                <input type="radio" name="res" value="good" />Good
+                &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+                <p> {{ pgood }}</p>
+                <br />
+            </li>
+            <li>
+                <input type="radio" name="res" value="satisfactory" />Satisfactory
+                &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+                <p> {{ psatis }}</p>
+                <br />
+            </li>
+            <li>
+                <input type="radio" name="res" value="bad" />Bad
+                &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+                <p> {{ pbad }}</p>
+                <br />
+            </li>
+        </ul>
+
+        <input type="submit" value="Submit">
+    </form>
+
+</body>
+</html>
